@@ -26,7 +26,7 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      <Results userInput={userInput} />
+      {userInput.duration <= 0 ? <p className="center">Please enter duration greather than 0.</p> : <Results userInput={userInput} />}
     </>
   )
 }
